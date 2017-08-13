@@ -123,7 +123,13 @@ nloptr.get.default.options <-
 		  "ranseed is a positive integer",
 		  "0",
 		  FALSE,
-		  "For stochastic optimization algorithms, pseudorandom numbers are generated. Set the random seed using ranseed if you want to use a 'deterministic' sequence of pseudorandom numbers, i.e. the same sequence from run to run. If ranseed is 0 (default), the seed for the random numbers is generated from the system time, so that you will get a different sequence of pseudorandom numbers each time you run your program.")
+		  "For stochastic optimization algorithms, pseudorandom numbers are generated. Set the random seed using ranseed if you want to use a 'deterministic' sequence of pseudorandom numbers, i.e. the same sequence from run to run. If ranseed is 0 (default), the seed for the random numbers is generated from the system time, so that you will get a different sequence of pseudorandom numbers each time you run your program."),
+		c("initial_stepsize",
+		  "numeric",
+		  "initial_stepsize",
+		  "0.1",
+		  FALSE,
+		  "Alrogithms initial stepsize")
 	),
 	stringsAsFactors = FALSE )
     names( dat.opts ) <- c( "name", "type", "possible_values", "default", "is_termination_condition", "description" )
