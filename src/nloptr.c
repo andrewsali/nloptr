@@ -222,12 +222,12 @@ double func_objective(unsigned n, const double *x, double *grad, void *data)
     d->num_iterations++;
   
     // print status
-    if ( d->print_level >= 1 ) {
+    if ( d->print_level >= 1  & d->num_iterations % 10 == 0) {
         Rprintf( "iteration: %d\n", d->num_iterations );
     }
     
     // print values of x
-    if ( d->print_level >= 3 ) {
+    if ( d->print_level >= 3 & d->num_iterations % 10 == 0) {
         if ( n == 1 ) {
             Rprintf( "\tx = %f\n", x[ 0 ] );
         }
@@ -271,7 +271,7 @@ double func_objective(unsigned n, const double *x, double *grad, void *data)
     }
   
     // print objective value
-    if ( d->print_level >= 1 ) {
+    if ( d->print_level >= 1  & d->num_iterations % 10 == 0) {
         Rprintf( "\tf(x) = %f\n", obj_value );
     }
     
